@@ -9,12 +9,12 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
-        <property name="url"><value>jdbc:mysql://localhost/braziljs</value></property>
-        <property name="username"><value>root</value></property>
-       <!-- <property name="password"><value>root</value></property>-->
+        <property name="driverClassName"><value>com.cloudbees.jdbc.Driver</value></property>
+        <property name="url"><value>jdbc:cloudbees://jcf-db</value></property>
+        <property name="username"><value>jcf</value></property>
+        <property name="password"><value>emflaxla</value></property>
     </bean>
-    
+
      <!-- Hibernate SessionFactory -->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
         <property name="dataSource"><ref local="dataSource"/></property>
@@ -27,12 +27,12 @@
         </props>
         </property>
     </bean>
-	
+
 	<!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
 	<tx:annotation-driven/>
     <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
         <property name="sessionFactory"><ref local="sessionFactory"/></property>
     </bean>
-    
+
 
 </beans>
