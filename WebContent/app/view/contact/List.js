@@ -1,12 +1,12 @@
 Ext.define('BrazilJS.view.contact.List' ,{
     extend: 'Ext.grid.Panel',
     alias : 'widget.contactlist',
-    
+
     //requires: ['Ext.toolbar.Paging'],
-    
+
     iconCls: 'icon-grid',
 
-    title : 'Contacts',
+    title : 'Sample Contacts',
     store: 'Contacts',
 
     columns: [{
@@ -25,9 +25,9 @@ Ext.define('BrazilJS.view.contact.List' ,{
 		flex:1,
 		dataIndex: 'email'
 	}],
-	
+
 	initComponent: function() {
-		
+
 		this.dockedItems = [{
             xtype: 'toolbar',
             items: [{
@@ -49,7 +49,7 @@ Ext.define('BrazilJS.view.contact.List' ,{
             displayMsg: 'Displaying contacts {0} - {1} of {2}',
             emptyMsg: "No contacts to display"
         }];
-		
+
 		this.callParent(arguments);
 	}
 });
