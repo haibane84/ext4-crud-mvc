@@ -1,9 +1,7 @@
 Ext.define('BrazilJS.view.contact.List' ,{
     extend: 'Ext.grid.Panel',
     alias : 'widget.contactlist',
-
     //requires: ['Ext.toolbar.Paging'],
-
     iconCls: 'icon-grid',
 
     title : 'Sample Contacts',
